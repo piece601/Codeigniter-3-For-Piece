@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /ci3
+RewriteCond $1 !^(index\.php|assets|uploads|images|robots\.txt|$)
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
