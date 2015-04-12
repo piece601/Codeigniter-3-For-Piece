@@ -1,4 +1,4 @@
-<?php @require_once '_templates/_header.php' ?>
+<?php @require_once VIEWPATH.'_templates/_header.php' ?>
 
 <section class="container">
 <form class="form-horizontal" method="post" enctype="mutipart/form-data">
@@ -66,4 +66,4 @@ $(function(){
 });
 </script>
 
-<?php @require_once '_templates/_header.php' ?>
+<?php @require_once VIEWPATH.'_templates/_header.php' ?>

@@ -1,4 +1,4 @@
-<? @require_once '_templates/_header.php';?>
+<? @require_once VIEWPATH.'_templates/_header.php';?>
 
 <article class="container">
 	<section class="row">
@@ -21,4 +21,4 @@
 	</section>
 </article>
 
-<? @require_once '_templates/_footer.php';?>
+<? @require_once VIEWPATH.'_templates/_footer.php';?>
