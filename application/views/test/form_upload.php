@@ -1,7 +1,7 @@
 <?php @require_once VIEWPATH.'_templates/_header.php' ?>
 
 <section class="container">
-	<form action="" method="post" enctype="mutipart/form-data">
+	<form action="" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="title">編題</label>
 			<input type="text" class="form-control" name="title">

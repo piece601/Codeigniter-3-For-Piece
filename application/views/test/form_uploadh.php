@@ -1,7 +1,7 @@
 <?php @require_once VIEWPATH.'_templates/_header.php' ?>
 
 <section class="container">
-<form class="form-horizontal" method="post" enctype="mutipart/form-data">
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="title" class="col-sm-2 control-label">標題</label>
     <div class="col-sm-10">

@@ -1,4 +1,4 @@
-<? @require_once VIEWPATH.'_templates/_header.php';?>
+<?php @require_once VIEWPATH.'_templates/_header.php';?>
 
 <article class="container">
 	<section class="row">
@@ -57,4 +57,4 @@
       						});
   }
 </script> 
-<? @require_once VIEWPATH.'_templates/_footer.php';?>
+<?php @require_once VIEWPATH.'_templates/_footer.php';?>
