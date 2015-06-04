@@ -1,4 +1,4 @@
-<?php @require_once VIEWPATH.'_templates/_header.php';?>
+<?php @require_once VIEWPATH.'_layouts/_header.php';?>
 <script type="text/javascript" src="<?=base_url('assets/js/ajaxfileupload.js')?>"></script>
 <article class="container">
 	<section class="row">
@@ -43,4 +43,4 @@ $(function(){
 });
 </script>
 
-<?php @require_once VIEWPATH.'_templates/_footer.php';?>
+<?php @require_once VIEWPATH.'_layouts/_footer.php';?>
