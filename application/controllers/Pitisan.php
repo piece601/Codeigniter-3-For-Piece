@@ -50,7 +50,7 @@ class Pitisan extends CI_Controller {
 				}
 				$this->controller($params[0], 'MY_Controller');
 				$this->model($params[0], $params[0], $params[0].'Id', 'MY_Model');
-				$this->view($params[0], $params);
+				$this->view($params[0], [null, '_layouts._header', '_layouts._footer']);
 				break;
 			default:
 				$this->index();
