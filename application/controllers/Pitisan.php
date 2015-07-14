@@ -24,33 +24,18 @@ class Pitisan extends CI_Controller {
 	{
 		switch ( $method ) {
 			case 'controller':
-				$this->controller(
-					isset($params[0]) ? $params[0] : Null,
-					isset($params[1]) ? $params[1] : 'CI_Controller'
-				);
+				$this->controller(	isset($params[0]) ? $params[0] : Null,
+														isset($params[1]) ? $params[1] : 'CI_Controller');
 				break;
 			case 'model':
-				$this->model(
-					isset($params[0]) ? $params[0] : Null,
-					isset($params[1]) ? $params[1] : Null,
-					isset($params[2]) ? $params[2] : Null,
-					isset($params[3]) ? $params[3] : 'CI_Model'
-				);
+				$this->model(	isset($params[0]) ? $params[0] : Null,
+											isset($params[1]) ? $params[1] : Null,
+											isset($params[2]) ? $params[2] : Null,
+											isset($params[3]) ? $params[3] : 'CI_Model');
 				break;
 			case 'view':
 				$this->view(	isset($params[0]) ? $params[0] : Null, $params);
 				break;
-			case 'all':
-				if ( ! isset($params[0])) {
-					echo "\n\033[33mUsage:\n\033[0m";
-					echo " all name \n\n";
-					echo "\033[33mArguments:\n\033[0m";
-					echo " name		The name of the controller class name and model class name and view file name.\n 		(use . to seperate sub directory like last example)\n\n";
-					break;
-				}
-				$this->controller($params[0], 'MY_Controller');
-				$this->model($params[0], $params[0], $params[0].'Id', 'MY_Model');
-				$this->view($params[0]);
 			default:
 				$this->index();
 				break;
@@ -112,16 +97,7 @@ class Pitisan extends CI_Controller {
 				mkdir( $folder );
 			}
 		}
-		$arrDir = explode('.', $fileName);
-		switch ( $mvc ) {
-			case 'views':
-				$arrDir[count($arrDir)-1] = strtolower( $arrDir[count($arrDir)-1] );
-				break;
-			default:
-				$arrDir[count($arrDir)-1] = ucfirst( $arrDir[count($arrDir)-1] );
-				break;
-		}
-		return implode('/', $arrDir);
+		return str_replace('.','/',$fileName);
 	}
 
 	public function index()
@@ -129,8 +105,7 @@ class Pitisan extends CI_Controller {
 		echo "\n\033[33mUsage:\n\033[0m";
 		echo " controller	Create controller\n";
 		echo " model		Create model\n";
-		echo " view		Create view\n";
-		echo " all		excute followed\n\n";
+		echo " view		Create view\n\n";
 		return true;
 	}
 
@@ -167,7 +142,7 @@ class Pitisan extends CI_Controller {
 			echo "Unable to write the file.\n";
 			return false;
 		}
-		echo $path . " controller was created!\n";
+		echo "Success!\n";
 		return true;
 	}
 
@@ -208,7 +183,7 @@ class Pitisan extends CI_Controller {
 			echo "Unable to write the file.\n";
 			return false;
 		}
-		echo $path . " model was created!\n";
+		echo "Success!\n";
 		return true;
 	}
 
@@ -250,7 +225,7 @@ class Pitisan extends CI_Controller {
 			echo "Unable to write the file.\n";
 			return false;
 		}
-		echo $path . " view was created!";
+		echo "Success!\n";
 		return true;
 	}
 
