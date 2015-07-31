@@ -1,9 +1,9 @@
 <?php @require_once VIEWPATH.'_layouts/_header.php';?>
-<script type="text/javascript" src="<?=base_url('assets/js/ajaxfileupload.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/ajaxfileupload.js')?>"></script>
 <article class="container">
 	<section class="row">
 
-		<form class="form-horizontal" role="form" method="post" action="<?=base_url('file/test2')?>" enctype="multipart/form-data">
+		<form class="form-horizontal" role="form" method="post" action="<?php echo base_url('file/test2')?>" enctype="multipart/form-data">
 		  <div class="form-group">
 		    <label class="col-sm-2 control-label">檔案位置</label>
 		    <div class="col-sm-9">
@@ -20,7 +20,7 @@ $(function(){
 	$('input[type=file]').on('change', ajaxFileUpload); // 上傳檔案欄位變更時，執行上傳
 		function ajaxFileUpload(){
 	    $.ajaxFileUpload({
-	          url: '<?=base_url('test/file/realtimeUpload')?>', // 送出位置
+	          url: '<?php echo base_url('test/file/realtimeUpload')?>', // 送出位置
 	          secureuri: false,
 	          fileElementId: 'userfile', //這個是對應到 input file 的 ID
 	          dataType: 'text',
