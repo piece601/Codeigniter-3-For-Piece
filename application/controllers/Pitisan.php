@@ -258,6 +258,7 @@ class Pitisan extends CI_Controller {
     echo " mc   Create controller and model\n";
     echo " form  建立一個 form 的 v\n";
     echo " formh  建立一個垂直 form 的 v\n";
+    echo " formmuti  建立一個多檔案上傳 form 的 v\n";
     echo " lazyload  建立一個 lazyload 的範例 v\n";
     echo " fancybox  建立一個 fancybox 的範例 v\n\n";
     return true;
