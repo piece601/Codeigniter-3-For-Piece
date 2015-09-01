@@ -63,7 +63,7 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> 'mysql:host=localhost;dbname=codeigniter',
 	'hostname' => 'localhost',
 	'username' => 'codeigniter',
 	'password' => 'codeigniter',
