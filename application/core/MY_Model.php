@@ -1,8 +1,6 @@
 <?php
 
-require_once('BASE_Model.php');
-
-class MY_Model extends BASE_Model {
+class MY_Model extends CI_Model {
 
 	protected $table; // 一定要設定 table 名稱
 	protected $primaryKey; // 一定要設定 primaryKey
